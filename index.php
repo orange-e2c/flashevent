@@ -109,21 +109,12 @@
 
 		<div id="localNavigation" class="container">
 			<nav class="navbar navbar-default nav-local" role="navigation" role="navigation">
-				<!--
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
-						<span class="sr-only">toggle navigation</span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				-->
 				<div class=" navbar-collapse local" id="bs-example-navbar-collapse-2">
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="#informations" data-toggle="tab">informations</a></li>
-						<li><a href="#inscriptions" data-toggle="tab">inscriptions</a></li>
+						<li><a href="#inscription" data-toggle="tab">inscription</a></li>
 					</ul>
 				</div>
-				<!-- /.navbar-collapse -->
 			</nav>
 		</div>
 
@@ -134,15 +125,15 @@
 			<div class="tab-pane active" id="informations">
 				<div class="container-fluid">
 					<div class="row">
-						<?php include( "home.php"); ?>
+						<?php include( "informations.php"); ?>
 					</div>
 				</div>
 			</div>
 
-			<div class="tab-pane " id="inscriptions">
+			<div class="tab-pane " id="inscription">
 				<div class="container-fluid">
 					<div class="row">
-						<?php include( "formulaire.php"); ?>
+						<?php include( "inscription.php"); ?>
 					</div>
 				</div>
 			</div>
@@ -150,39 +141,8 @@
 		</div>
 
 	</main>
-	<!--
-	<main class="container-fluid" role="main">
-
-		<div class="row col-wrap">
-			<div class="col-xs-12 col" id="first">
-				<div class="info-block">
-
-					<h1 id="search" class="h2">évènements</h1>
-
-					<ul class="nav navbar-nav" role="tablist">
-						<li class="active"><a href="#informations" data-toggle="tab">informations</a></li>
-						<li><a href="#inscriptions" data-toggle="tab">inscriptions</a></li>
-					</ul>
-
-					<div class="tab-content">
-
-						<div class="tab-pane active" id="informations">
-							
-						</div>
-
-						<div class="tab-pane " id="inscriptions">
-							
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</main>
--->
-	<!--/.container-->
-
+	
+	<!-- footer -->
 	<footer id="footer" role="contentinfo">
 		<div class="container">
 			<p>
