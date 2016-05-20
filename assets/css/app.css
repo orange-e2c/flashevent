@@ -1,0 +1,14 @@
+footer {
+	background-color: #EEEEEE;
+	border-bottom: 1px solid #F3F3F3;
+	border-top: 1px solid #D6D6D6;
+	overflow: hidden;
+	min-height: 54px;
+	height: auto;
+	margin: 10px auto 20px;
+}
+footer a, footer span{
+	color: inherit;
+	text-align: center;
+}
+
