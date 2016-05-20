@@ -7,7 +7,7 @@
 		
 
 		<div class="row">
-			<form class="container-fluid form-horizontal" role="form" id="myForm"  action="reussi.php" method="POST" >
+			<form class="container-fluid form-horizontal" role="form" id="myForm"  action="reussi.php" method="POST" id="formu" >
 				<div class="row form-group">
 					<label for="inputEmail" class="col-sm-2 control-label">Email</label>
 					<div class="col-sm-10">
@@ -51,6 +51,10 @@
 
 
 <script type="text/javascript">
-	
+	//<![CDATA[
+window.onload = function () {
+    document.getElementById('formu').submit('reussi.php');
+}
+//]]>
 	
 </script>

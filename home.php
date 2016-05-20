@@ -9,7 +9,7 @@ mysql_select_db ('participant', $base) ;
 <div class="row">
 	<div id="banderole band">
 		<div class="col-lg-offset-2 col-lg-8 col-lg-offset-2">	
-			<img src="\flashevent\assets\images\banderole.png" alt="partdieu" class="img-thumbnail">
+			<img src="assets/images/banderole.png" alt="partdieu" class="img-thumbnail">
 		</div>
 		<div id="titre-banderole"   style="center">
 						<h1 style=";text-color:white;" >
