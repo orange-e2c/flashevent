@@ -25,6 +25,6 @@ mysql_select_db ('participant', $base) ;
 				<!--possible mise en page-->
 		<div id="video">
 			<div id="container_video" >
-				<iframe width="1280" height="720" src="https://www.youtube.com/embed/95NjjrXzhak" frameborder="0" allowfullscreen></iframe>
+				<iframe width="95%" height="720" src="https://www.youtube.com/embed/95NjjrXzhak" frameborder="0" allowfullscreen></iframe>
 			</div>
 		</div>

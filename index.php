@@ -174,9 +174,9 @@
 
 		<!-- Placed at the end of the document so the pages load faster -->
      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="vendors/jquery/1.11.3/jquery.min.js"></script>
     <!-- jQuery validate -->
-    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script src="vendors/jquery.validate/1.13.1/jquery.validate.min.js"></script>
     <!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
     <script src="vendors/boosted-v3.2.1/js/boosted.min.js"></script>
 	<script>
