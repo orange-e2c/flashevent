@@ -122,7 +122,7 @@
 							</ul>
 						</li>
 					</ul>
-			</div>-- /.navbar-collapse -->
+			</div>  /.navbar-collapse -->
 			</div><!-- /.container-fluid -->
 		</nav>
 		</header>
@@ -145,7 +145,7 @@
 						
 						<div class="tab-pane hide-when-small" id="informations">
 								<?php
-							include 'home.php';
+							include '\flashevent\home.php';
 							?>
 						</div>
 						
@@ -153,7 +153,7 @@
 							<!-- TODO : include php news -->
 							<?php include("formulaire.php"); ?>
 							
-					
+						</div>
 
 			
 			
