@@ -144,190 +144,21 @@
 					<div class="tab-content">
 						
 						<div class="tab-pane hide-when-small" id="informations">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+								<?php
+							include 'home.php';
+							?>
 						</div>
 						
 						<div class="tab-pane active" id="inscriptions">
 							<!-- TODO : include php news -->
-							<?php
-							include 'home.php';
-							?>
+							<?php include("formulaire.php"); ?>
 							
-							<form id="search-users" name="searchUsers" method="post" action="" class="form-horizontal">
-								<div class="form-group">
-									<label for="phone" class="col-sm-2 control-label">Phone <span class="star">*</span> </label>
-									<div class="col-sm-10">
-										<input class="form-control required" required="" aria-required="true" name="phone" id="phone" maxlength="3" type="tel">
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="pro_check" class="col-sm-2 control-label">Pro ? <span class="star">*</span> </label>
-									<div class="col-sm-10">
-										<input id="pro_check" type="checkbox" class="checkbox"> 
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="location" class="col-sm-2 control-label">Location <span class="star">*</span></label>
-									<div class="col-sm-10">
-										<select class="valid form-control" id="location" name="location">
-											<option value="AF"> Afghanistan </option>
-											<option value="AL"> Albania </option>
-											<option value="DZ"> Algeria </option>
-											<option value="AS"> American Samoa </option>
-											<option value="AD"> Andorra </option>
-											<option value="AO"> Angola </option>
-											<option value="AI"> Anguilla </option>
-											<option value="AQ"> Antarctica </option>
-											<option value="AG"> Antigua and Barbuda </option>
-											<option value="AR"> Argentina </option>
-											<option value="AM"> Armenia </option>
-											<option value="AW"> Aruba </option>
-											<option value="AU"> Australia </option>
-											<option value="AT"> Austria </option>
-											<option value="AZ"> Azerbaijan </option>
-											<option value="BS"> Bahamas </option>
-											<option value="OT"> ... </option>
-										</select>
-									</div>
-								</div>
-
-								<div class="center">
-									<button type="submit" class="btn btn-primary">search</button>
-								</div>
-							</form>
-
-						</div>
 					
 
-					</div>
-				</div>
-			</div>
-
 			
 			
 		</div>
-		
-		<div class="row base col-wrap">
-			<!-- add a second row of wells or rounded corner divs immeadiately underneath - tips to create x same height columns -->
-			<div class="col-md-6 col-base"><div class="info-block"></div></div>
-			<div class="col-md-6 col-base"><div class="info-block"></div></div>
-		</div>
 
-		<div class="row">
-			<div class="col-md-12" id="third">
-				<div class="info-block">
-					<h1 id="sysInfo" class="h2">systems information</h1>
-					<div class="row test">
-						<div class="col-lg-4 col-md-6">
-							<div class="sub-block">
-								<h2 class="h4">system A</h2>
-								<table id="sys1" class="table">
-									<thead class="cf">
-										<tr>
-											<th scope="col"></th>
-											<th scope="col">id</th>
-											<th scope="col">type</th>
-											<th scope="col">status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><img src="assets/images/Cancel.png" class="alert-img"/></td>
-											<td>447765896321</td>
-											<td>BT</td>
-											<td><span class="error">stopped</span></td>
-										</tr>
-										<tr>
-											<td><img src="assets/images/Ok.png" class="alert-img"/></td>
-											<td>447765896327</td>
-											<td>Warn</td>
-											<td><span class="ok">ok</span></td>
-										</tr>
-										<tr>
-											<td><img src="assets/images/Warning.png" class="alert-img"/></td>
-											<td>447765896322</td>
-											<td>MMK</td>
-											<td><span class="warning">disfunction</span></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="sub-block">
-								<h2 class="h4">system B</h2>
-								<table id="sys2" class="table">
-									<thead class="cf">
-										<tr>
-											<th scope="col"></th>
-											<th scope="col">id</th>
-											<th scope="col">type</th>
-											<th scope="col">status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><img src="assets/images/Cancel.png" class="alert-img"/></td>
-											<td>447765896321</td>
-											<td>BT</td>
-											<td><span class="error">stopped</span></td>
-										</tr>
-										<tr>
-											<td><img src="assets/images/Ok.png" class="alert-img"/></td>
-											<td>447765896327</td>
-											<td>Warn</td>
-											<td><span class="ok">ok</span></td>
-										</tr>
-										<tr>
-											<td><img src="assets/images/Warning.png" class="alert-img"/></td>
-											<td>447765896322</td>
-											<td>MMK</td>
-											<td><span class="warning">disfunction</span></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-6">
-							<div class="sub-block">
-								<h2 class="h4">system C</h2>
-								<table id="sys3" class="table">
-									<thead class="cf">
-										<tr>
-											<th scope="col"></th>
-											<th scope="col">id</th>
-											<th scope="col">type</th>
-											<th scope="col">status</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td><img src="assets/images/Cancel.png" class="alert-img"/></td>
-											<td>447765896321</td>
-											<td>BT</td>
-											<td><span class="error">stopped</span></td>
-										</tr>
-										<tr>
-											<td><img src="assets/images/Ok.png" class="alert-img"/></td>
-											<td>447765896327</td>
-											<td>Warn</td>
-											<td><span class="ok">ok</span></td>
-										</tr>
-										<tr>
-											<td><img src="assets/images/Warning.png" class="alert-img"/></td>
-											<td>447765896322</td>
-											<td>MMK</td>
-											<td><span class="warning">disfunction</span></td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!-- fin de la row globale-->
 	</main><!--/.container-->
 
 	<footer role="contentinfo">
