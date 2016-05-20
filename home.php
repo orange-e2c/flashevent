@@ -1,9 +1,4 @@
-<?php
-// on se connecte à notre base
-$base = mysql_connect ('127.0.0.1', 'aurelien', 'e2c69120');
-mysql_select_db ('participant', $base) ;
-?>
-	<!-- Tab panes -->
+<!-- Tab panes -->
 <h1 class="accroche">Venez dansez au pied de la Tour Part Dieu, le 21 Juin prochain !</h1>
 	
 <div class="row">

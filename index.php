@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="vendors/boosted-v3.2.1/css/bootstrap-orange2015.css" />
         <link rel="stylesheet" href="vendors/boosted-v3.2.1/css/bootstrap-orange-theme2015.css" />
         <link rel="stylesheet" href="vendors/boosted-v3.2.1/css/boosted2015.css">
-        <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+        <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
         <link href="assets/css/style4.css" rel="stylesheet">
         <!--<![endif]-->
 		<link href="assets/css/gabarit.css" rel="stylesheet">
@@ -145,15 +145,11 @@
 					<div class="tab-content">
 						
 						<div class="tab-pane hide-when-small active" id="informations">
-								<?php
-							include 'home.php';
-							?>
+							<?php include("home.php"); ?>
 						</div>
 						
 						<div class="tab-pane " id="inscriptions">
-							<!-- TODO : include php news -->
 							<?php include("formulaire.php"); ?>
-							
 						</div>
 
 					</div>

@@ -7,7 +7,7 @@
 		
 
 		<div class="row">
-			<form class="container-fluid form-horizontal" role="form" id="myForm"  action="reussi.php" method="POST" id="formu" >
+			<form class="container-fluid form-horizontal" role="form" id="myForm" onsubmit="return validateForm(reussi.php)"  method="POST" id="formu" >
 				<div class="row form-group">
 					<label for="inputEmail" class="col-sm-2 control-label">Email</label>
 					<div class="col-sm-10">
@@ -41,7 +41,7 @@
 
 				<div class="form-group">
 					<div class="col-sm-offset-2 col-sm-10">
-						<button type="submit" class="btn btn-default">S'inscrire</button>
+						<button type="submit" class="btn btn-default" >S'inscrire</button>
 					</div>
 				</div>
 			</form>
@@ -51,10 +51,14 @@
 
 
 <script type="text/javascript">
-	//<![CDATA[
-window.onload = function () {
-    document.getElementById('formu').submit('reussi.php');
+
+function validateForm() {
+    var x = document.forms["inputEmail"]["inputNom"]["inputPrenom"]["inputEntreprise"].value;
+    if (x == null || x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
 }
-//]]>
+//--> 
 	
 </script>
