@@ -49,40 +49,8 @@
 	</main>
 
 
-	<!-- Placed at the end of the document so the pages load faster -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- jQuery validate -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.14.0/jquery.validate.min.js"></script>
-	<!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
-	<script src="../../dist/js/boosted.js"></script>
 
-	<script type="text/javascript">
-		// Surcharge des valeurs du script de la toolbar
-		accessibilitytoolbar_custom = {
-			idLinkModeContainer: "id_for_cdu_link",
-			cssLinkModeClassName: "nav-item-cdu",
-			idSkipLinkIdLinkMode: "cdu_skiplink",
-			cssSkipLinkClassName: "skiplinks_trigger",
-			callback: skiplinksAfterLoad
-		};
-
-
-		$(".skiplinks_trigger").focus(function() {
-			$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
-		});
-		$(".skiplinks_trigger").blur(function() {
-			$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
-		});
-
-		function skiplinksAfterLoad() {
-			$(".skiplinks_trigger").focus(function() {
-				$(".skiplinks_section").addClass("skiplinks_show").removeClass("axs_hide")
-			});
-			$(".skiplinks_trigger").blur(function() {
-				$(".skiplinks_section").removeClass("skiplinks_show").addClass("axs_hide")
-			});
-		}
-	</script>
-	<!--<script type="text/javascript" src="http://comfort.orange.com/serveur/crossdom/js/toolbar-min.js"></script>-->
-
+<script type="text/javascript">
+	
+	
+</script>
