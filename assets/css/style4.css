@@ -131,6 +131,7 @@ echo
     height: 270px;
     
     
+    
 }
 .band
 {
@@ -164,3 +165,17 @@ echo
     height:100%;
     
 }
+
+.img-thumbnail
+{
+    float:left;
+}
+
+.textes
+{
+    float:left;
+}
+
+.textees
+
+
