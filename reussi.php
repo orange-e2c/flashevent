@@ -28,19 +28,21 @@ or die('Connexion impossible : ' . pg_last_error());
         	
         	// $query = 'INSERT INTO liste_inscri (droit_image,nom,prenom,email,entreprise) VALUES("'.$_POST['inputNom3'].'", "'.$_POST['inputPrenom3'].'", "'.$_POST['inputEmail3'].'", "'.$_POST['inputEntreprised3'].'")';
         	
-		    $query = test($_POST['droit_img']); 
-    		pg_query ($query) or die ('Erreur SQL !'.$query.'<br />'.mysql_error());
+	        if (strlen( $_POST['inputNom'] ) == 0)
+	        {
+	        	echo 'erreur nom obligatoire';
+	        } else {
+			    $query = buildQueryInsert($_POST['droit_img']); 
+	    		pg_query ($query) or die ('Erreur SQL !'.$query.'<br />'.mysql_error());
+		        echo 'Merci de votre inscription à l\'événement , Rendez vous le 21/06/2016 à la tour de la part dieu.';
+	        }
     	
-    		
-    		// $numero_insere = mysql_insert_id();
-    		
     		pg_close($dbconn);
     		
     		
-	        echo 'Merci de votre inscription à l\'événement , Rendez vous le 21/06/2016 à la tour de la part dieu\.';
 		}
 			
-		function test ($droit_img){
+		function buildQueryInsert ($droit_img){
 			
 		    //var_dump($param);
 		    if ($droit_img == 'on'){
@@ -56,10 +58,7 @@ or die('Connexion impossible : ' . pg_last_error());
 		    
 		}
 		   
-        if (strlen( $_POST['inputNom'] ))
-        {
-        	echo 'exit';
-        }
+
 	
     	
 ?>
