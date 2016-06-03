@@ -57,7 +57,7 @@
 		*/
 		
 		$.post('reussi.php', $("#formcom").serialize()).done(function(response) {
-			alert('response='+response);
+			alert(response);
 		});
 		/*
 		$.post("reussi.php", {droit_img: droit_img, inputNom: inputNom, inputPrenom: inputPrenom inputEntreprise: inputEntreprise inputEmail: inputEmail, com:message}, function(data){
