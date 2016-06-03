@@ -1,7 +1,11 @@
 <?php
-// on se connecte à notre base
-$base = mysql_connect ('127.0.0.1', 'aurelien', 'e2c69120');
-mysql_select_db ('participant', $base) ;
+
+// connexion : heroku pg:psql --app orange-e2c-flashevent-dev DATABASE
+
+// Connexion, sélection de la base de données
+// DEV
+$dbconn = pg_connect("host=ec2-54-228-189-127.eu-west-1.compute.amazonaws.com dbname=d3psr2c3ccmceu user=mqpimsyvvtqzfq password=YXI4KmW87z9S07QbWoc0HOM2zx port=5432")
+or die('Connexion impossible : ' . pg_last_error());
 ?>
 <html>
    
@@ -17,8 +21,8 @@ mysql_select_db ('participant', $base) ;
         <center><h1>Liste des participants.</h1>
         
           <?php 
-         
-          if (isset($_POST['password']) AND $_POST['password'] ==  "orangee2c")
+         if(true)
+          //if (isset($_POST['password']) AND $_POST['password'] ==  "orangee2c")
           {
 
           ?>
@@ -33,26 +37,30 @@ mysql_select_db ('participant', $base) ;
      <?php
         // lancement de la requête (on impose aucune condition puisque l'on désire obtenir la liste complète des propriétaires
      
-        $sql = 'SELECT * FROM liste_inscri';
+        $query = 'SELECT * FROM personne';
         
         // on lance la requête (mysql_query) et on impose un message d'erreur si la requête ne se passe pas bien (or die)
-        $req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
+        $result = pg_query($query) or die('Échec de la requête : ' . pg_last_error());
         
         // on va scanner tous les tuples un par un
-        while ($data = mysql_fetch_array($req)) {
+        while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+            //foreach ($line as $col_value) {
     ?>
           
                 <tr>
-                    <td><?php echo $data['droit_image'] ?></td>
-                    <td><?php echo $data['nom'] ?></td>
-                    <td><?php echo $data['prenom'] ?></td>
-                    <td><?php echo $data['email'] ?></td>
-                    <td><?php echo $data['entreprise'] ?></td>
+                    <td><?php echo $line['droit_image'] ?></td>
+                    <td><?php echo $line['nom'] ?></td>
+                    <td><?php echo $line['prenom'] ?></td>
+                    <td><?php echo $line['email'] ?></td>
+                    <td><?php echo $line['entreprise'] ?></td>
                 </tr>
                 
         <?php
-        }
-        mysql_close ();
+        
+            //}    
+            }
+        
+        pg_close($dbconn);
     ?>
         <?php
           }

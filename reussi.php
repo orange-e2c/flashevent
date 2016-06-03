@@ -1,8 +1,13 @@
 
+
 <?php
-// on se connecte à notre base
-$base = mysql_connect ('127.0.0.1', 'aurelien', 'e2c69120');
-mysql_select_db ('participant', $base) ;
+
+// connexion : heroku pg:psql --app orange-e2c-flashevent-dev DATABASE
+
+// Connexion, sélection de la base de données
+// DEV
+$dbconn = pg_connect("host=ec2-54-228-189-127.eu-west-1.compute.amazonaws.com dbname=d3psr2c3ccmceu user=mqpimsyvvtqzfq password=YXI4KmW87z9S07QbWoc0HOM2zx port=5432")
+or die('Connexion impossible : ' . pg_last_error());
 ?>
 
 <?php    
@@ -10,7 +15,7 @@ mysql_select_db ('participant', $base) ;
     	{
 		    /*
 	    	// on prépare la requête pour récupérer le numero du propriétaire 
-        	$sql = 'SELECT Nom FROM liste_inscri WHERE nom = "'.$_POST['inputNom3'].'"';
+        	$query = 'SELECT Nom FROM liste_inscri WHERE nom = "'.$_POST['inputNom3'].'"';
         
         	// on lance la requête (mysql_query) et on impose un message d'erreur si la requête ne se passe pas bien (or die)
         	$req = mysql_query($sql) or die('Erreur SQL !<br />'.$sql.'<br />'.mysql_error());
@@ -21,15 +26,15 @@ mysql_select_db ('participant', $base) ;
         	// on libère l'espace mémoire alloué pour cette interrogation de la base
         	mysql_free_result ($req); */
         	
-        	// $sql = 'INSERT INTO liste_inscri (droit_image,nom,prenom,email,entreprise) VALUES("'.$_POST['inputNom3'].'", "'.$_POST['inputPrenom3'].'", "'.$_POST['inputEmail3'].'", "'.$_POST['inputEntreprised3'].'")';
+        	// $query = 'INSERT INTO liste_inscri (droit_image,nom,prenom,email,entreprise) VALUES("'.$_POST['inputNom3'].'", "'.$_POST['inputPrenom3'].'", "'.$_POST['inputEmail3'].'", "'.$_POST['inputEntreprised3'].'")';
         	
-		    $sql = test($_POST['droit_img']); 
-    		mysql_query ($sql) or die ('Erreur SQL !'.$sql.'<br />'.mysql_error());
+		    $query = test($_POST['droit_img']); 
+    		pg_query ($query) or die ('Erreur SQL !'.$query.'<br />'.mysql_error());
     	
     		
-    		$numero_insere = mysql_insert_id();
+    		// $numero_insere = mysql_insert_id();
     		
-    		mysql_close();
+    		pg_close($dbconn);
     		
     		
 	        echo 'Merci de votre inscription à l\'événement , Rendez vous le 21/06/2016 à la tour de la part dieu\.';
@@ -40,13 +45,13 @@ mysql_select_db ('participant', $base) ;
 		    //var_dump($param);
 		    if ($droit_img == 'on'){
 		    	
-		    $sql = 'INSERT INTO liste_inscri (droit_image,nom,prenom,email,entreprise) VALUES("'.$_POST['droit_img'].'", "'.$_POST['inputNom'].'", "'.$_POST['inputPrenom'].'", "'.$_POST['inputEmail'].'", "'.$_POST['inputEntreprise'].'")';
+		    $query = 'INSERT INTO personne (droit_image,nom,prenom,email,entreprise) VALUES(\''.$_POST['droit_img'].'\', \''.$_POST['inputNom'].'\', \''.$_POST['inputPrenom'].'\', \''.$_POST['inputEmail'].'\', \''.$_POST['inputEntreprise'].'\')';
 		    }
 		    else
 		    {
-		     $sql = 'INSERT INTO liste_inscri (nom,prenom,email,entreprise) VALUES("'.$_POST['inputNom'].'", "'.$_POST['inputPrenom'].'", "'.$_POST['inputEmail'].'", "'.$_POST['inputEntreprise'].'")';
+		     $query = 'INSERT INTO personne (nom,prenom,email,entreprise) VALUES(\''.$_POST['inputNom'].'\', \''.$_POST['inputPrenom'].'\', \''.$_POST['inputEmail'].'\', \''.$_POST['inputEntreprise'].'\')';
 		    }
-		  return ($sql);
+		  return ($query);
 		    
 		    
 		}
