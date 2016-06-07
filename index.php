@@ -20,9 +20,15 @@
 	<link rel="stylesheet" href="vendors/boosted-v3.2.1/css/bootstrap-orange-theme2015.css" />
 	<link rel="stylesheet" href="vendors/boosted-v3.2.1/css/boosted2015.css">
 	<link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-	<!--<link href="assets/css/style4.css" rel="stylesheet">-->
+	<link href="assets/css/style4.css" rel="stylesheet">
 	<!--<![endif]-->
-	<link href="assets/css/app.css" rel="stylesheet">
+	<link href="assets/css/gabarit.css" rel="stylesheet">
+
+	<!-- Placed at the end of the document so the pages load faster -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="vendors/jquery/1.11.3/jquery.min.js"></script>
+	<!-- jQuery validate -->
+	<script src="vendors/jquery.validate/1.13.1/jquery.validate.min.js"></script>
 
 	<style>
 		/* accessibility */
@@ -53,12 +59,6 @@
 		}
 	</style>
 
-	<!-- Placed at the end of the document so the pages load faster -->
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="vendors/jquery/1.11.3/jquery.min.js"></script>
-	<!-- jQuery validate -->
-	<script src="vendors/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-
 </head>
 
 <body role="document">
@@ -83,78 +83,103 @@
 
 
 	<header role="banner">
-		
-		<nav class="navbar navbar-default">
-		  <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#">
-		        <img src="assets/images/logo-orange.png" alt='' style="float:left"/>
-		        <span class="navbar-brand-text" style="margin-top: 3rem;position: absolute;padding: 0 1rem 1rem;">flash event</span>
-		      </a>
-		    </div>
-		  </div>
-		</nav>
+		<nav class="navbar navbar-inverse" role="navigation">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#">
+						<img id="orange_logo" src="assets/images/logo-orange.png" alt='' />
+						<span id="app_name">flash event <span class="sr-only">flash event</span></span>
+					</a>
+				</div>
 
+				<!-- Collect the nav links, forms, and other content for toggling 
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav nav-menu nav-shift">
+						<li class="nav-item"><a href="#" title="open the news menu">dashboard</a></li>
+						<li class="nav-item"><a href="#" title="open the news menu">manage</a></li>
+						<li class="nav-item"><a href="#" title="open the news menu">parameters</a></li>
+						<li class="nav-item" id="id_for_cdu_link"></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li class="nav-item">
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+								<span class="hidden-xs hidden-sm">&nbsp;language</span>&nbsp;<b class="caret" aria-hidden="true"></b>
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">français</a></li>
+								<li><a href="#">english</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a href="#" class="dropdown-toggle active" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+								<span class="hidden-xs hidden-sm">&nbsp;hello 
+									<span class="orange">admin</span>&nbsp;
+								</span><b class="caret" aria-hidden="true"></b>
+
+							</a>
+							<ul class="dropdown-menu">
+								<li><a href="#">logout</a></li>
+								<li><a href="#">preferences</a></li>
+							</ul>
+						</li>
+					</ul>
+			</div>  /.navbar-collapse -->
+			</div>
+			<!-- /.container-fluid -->
+		</nav>
 	</header>
 
 
-	<main class="container" role="main" id="content">
-		<div id="header" class="container">
-			<div class="row">
-				<div class="col-sm-6">
-					<h1>événements</h1>
-				</div>
-			</div>
-		</div>
+	<main id="content" class="container-fluid" role="main">
 
-		<div id="localNavigation" class="container">
-			<nav class="navbar navbar-default nav-local" role="navigation" role="navigation">
-				<div class=" navbar-collapse local" id="bs-example-navbar-collapse-2">
-					<ul class="nav navbar-nav">
+		<div class="row col-wrap">
+			<div class="col-md-12 col" id="first">
+				<div class="info-block">
+
+					<h1 id="search" class="h2">évènements</h1>
+
+					<ul class="nav nav-tabs" role="tablist">
 						<li class="active"><a href="#informations" data-toggle="tab">informations</a></li>
-						<li><a href="#inscription" data-toggle="tab">inscription</a></li>
+						<li><a href="#inscriptions" data-toggle="tab">inscriptions</a></li>
 					</ul>
-				</div>
-			</nav>
-		</div>
 
+					<div class="tab-content">
 
+						<div class="tab-pane hide-when-small active" id="informations">
+							<?php include( "home.php"); ?>
+						</div>
 
-		<div class="tab-content" style="border:0 none;">
+						<div class="tab-pane " id="inscriptions">
+							<?php include( "formulaire.php"); ?>
+						</div>
 
-			<div class="tab-pane active" id="informations">
-				<div class="container-fluid">
-					<div class="row">
-						<?php include( "informations.php"); ?>
 					</div>
 				</div>
 			</div>
-
-			<div class="tab-pane " id="inscription">
-				<div class="container-fluid">
-					<div class="row">
-						<?php include( "inscription.php"); ?>
-					</div>
-				</div>
-			</div>
-
 		</div>
 
 	</main>
-	
-	<!-- footer -->
-	<footer id="footer" role="contentinfo">
-		<div class="container">
+	<!--/.container-->
+
+	<footer role="contentinfo">
+		<div class="container-fluid ">
 			<p>
-				<span class="col-md-2">© Orange 2014</span>
-				<a class="col-md-2" href="#"><span>sitemap</span></a>
-				<a class="col-md-2" href="#"><span>terms & conditions</span></a>
-				<a class="col-md-2" href="#"><span>CSR</span></a>
-				<a class="col-md-2" href="#"><span>cookies</span></a>
-				<a class="col-md-2" href="#"><span>Foundation</span></a>
+				<a href="#"><span>contact</span></a>
+				<a href="#" class="pull-right"><span>help</span></a>
 			</p>
 		</div>
 	</footer>
+
+
 
 	<!-- Include all compiled plugins bootstrap, bootstrap accessibility plugin and boosted specific components (below), or include individual files as needed -->
 	<script src="vendors/boosted-v3.2.1/js/boosted.min.js"></script>

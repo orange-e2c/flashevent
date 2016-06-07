@@ -22,7 +22,7 @@ a:hover
 }
 ul
 {
-    list-style-type: none;
+    list-style-type:none ;
 }
 .col-sm-12
 {
@@ -131,6 +131,7 @@ echo
     height: 270px;
     
     
+    
 }
 .band
 {
@@ -141,6 +142,7 @@ echo
     font-family: fantasy;
     text-align:center;
     margin-bottom:50px;
+    font-size:50px;
 }
 #video
 {
@@ -162,5 +164,45 @@ echo
     left:0;
     width:100%;
     height:100%;
+  
+}
+
+.img-thumbnail
+{
+    float:left;
+    height:500px;
+    width:550px;
+}
+footer
+{
+    float:left;
+}
+* p
+{
+    font-size:25px;
+   
+}
+span
+{
+    color:rgb(241,110,0);
+}
+ul 
+{
+    font-size: 18px;
     
 }
+.titre_puce
+{
+    text-decoration: underline;
+}
+/*
+{
+    border:1px solid black;
+}
+*/
+
+
+
+
+
+
