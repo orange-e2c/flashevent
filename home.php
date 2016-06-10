@@ -31,15 +31,15 @@
 			<div>	
 				<h2>Mandar'in Dance, Fitness Park et Orange</h2>
 				<p>organise en libre accès à tous ceux qui le souhaitent, le <strong>21 juin prochain</strong> <span>pour la fête de la musqiue,</span> une danse collective simple et sympa à côté de la Tour Part Dieu, sur l'esplanade de l'auditorium.</p>
-				<p><span>Inscrivez-vous</span> et recevez toutes les informations nécessaire y compris pour apprendre ou réviser le Madison ou la Zumba d'ici là. (des cours collectifs sont données chaque semaine).</p>
+				<p><span>Inscrivez-vous</span> et recevez toutes les informations nécessaire y compris pour apprendre ou réviser le Madison ou la Zumba d'ici là (des cours collectifs sont donnés chaque semaine).</p>
 				<ul>
 					<li class="titre_puce">Programme:</li>
 					<ul>
-						<li>Introduction en musicale classique</li>
+						<li>Introduction en musique classique</li>
 						<li>1er Madison pour échauffement</li>
 						<li>1ere Zumba.. pour échauffement aussi</li>
 						<li>Le Madison en live</li>
-						<li>le Zumba en live aussi</li>
+						<li>La Zumba en live aussi</li>
 						<li>Conclusion en musique classique</li>
 					</ul>
 		
