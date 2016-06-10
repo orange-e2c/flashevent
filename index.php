@@ -154,7 +154,7 @@
 
 					<div class="tab-content">
 
-						<div class="tab-pane hide-when-small active" id="informations">
+						<div class="tab-pane active" id="informations">
 							<?php include( "home.php"); ?>
 						</div>
 
@@ -171,11 +171,15 @@
 	<!--/.container-->
 
 	<footer role="contentinfo">
-		<div class="container-fluid ">
-			<p>
-				<a href="#"><span>contact</span></a>
-				<a href="#" class="pull-right"><span>help</span></a>
-			</p>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-sm-12">
+					<h4><a href="http://www.orange.fr/" class="pull-left"><span>orange</span></a></h4>
+					<h4>
+						<a href="http://www.reseau-e2c.fr/ecoles/cartographie/labellisees/466-vaulx-agglo-2eme-chance.html" class="pull-right"><span>E2C</span></a>					
+					</h4>
+				</div>
+			</div>
 		</div>
 	</footer>
 

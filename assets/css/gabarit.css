@@ -83,11 +83,12 @@ table .alert-img{
 	margin: 10px;
 }
 footer {
-	background-color: #333333;
-	/*height: auto;*/
+	background-color: #CCC;
+	height: 40px;
 }
 footer a {
 	color: white;
+	text-decoration: none;
 }
 .navbar-inverse #id_for_cdu_link a{
     color: #fff;

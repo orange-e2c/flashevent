@@ -24,11 +24,7 @@ ul
 {
     list-style-type:none ;
 }
-.col-sm-12
-{
-    line-height: 150px;
-    margin:0;
-}
+
 .col-xs-6
 {
      /*border:1px solid black;*/
@@ -86,12 +82,6 @@ a
 
 
 /********footer*******/
-
-#footer
-{
-    background: rgb(0, 0, 0) none repeat scroll 0% 0%;
-    color: white;
-}
 
 .reseau-social
 {
@@ -171,12 +161,9 @@ echo
 {
     float:left;
     height:500px;
-    width:550px;
+    width:870px;
 }
-footer
-{
-    float:left;
-}
+
 * p
 {
     font-size:25px;
@@ -195,11 +182,11 @@ ul
 {
     text-decoration: underline;
 }
-/*
+.col-lg-5
 {
     border:1px solid black;
 }
-*/
+
 
 
 
