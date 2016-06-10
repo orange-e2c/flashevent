@@ -4,8 +4,16 @@
 
 // Connexion, sélection de la base de données
 // DEV
+
 $dbconn = pg_connect("host=ec2-54-228-189-127.eu-west-1.compute.amazonaws.com dbname=d3psr2c3ccmceu user=mqpimsyvvtqzfq password=YXI4KmW87z9S07QbWoc0HOM2zx port=5432")
 or die('Connexion impossible : ' . pg_last_error());
+
+
+// PROD 
+/*
+$dbconn = pg_connect("host=ec2-54-247-185-241.eu-west-1.compute.amazonaws.com dbname=d85osmb4pd3g1m user=wtckfszurfcwey password=CFXbOZvKgH1b8tB9OkVNe1bOSS port=5432")
+or die('Connexion impossible : ' . pg_last_error());
+*/
 
 // Exécution de la requête SQL
 $query = 'SELECT * FROM personne';
