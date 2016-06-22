@@ -150,6 +150,7 @@
 					<ul class="nav nav-tabs" role="tablist">
 						<li class="active"><a href="#informations" data-toggle="tab">informations</a></li>
 						<li><a href="#inscriptions" data-toggle="tab">inscriptions</a></li>
+						<li><a href="#Gallerie" data-toggle="tab">Gallerie</a></li>
 					</ul>
 
 					<div class="tab-content">
@@ -158,9 +159,15 @@
 							<?php include( "home.php"); ?>
 						</div>
 
-						<div class="tab-pane " id="inscriptions">
+						<div class="tab-pane " id="inscriptions" role="tabpanel">
 							<?php include( "formulaire.php"); ?>
 						</div>
+						
+						<div class="tab-pane" id="Gallerie" role="tabpanel">
+							<?php include( "gallery.php"); ?>
+						</div>
+
+						
 
 					</div>
 				</div>
